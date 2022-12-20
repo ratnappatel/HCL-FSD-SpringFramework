@@ -42,10 +42,13 @@ public class CustomerController {
 	}
 	
 	@PostMapping("/addCustomer")
-	public String addCustomer(@RequestParam Integer id,@RequestParam String name, @RequestParam String email, @RequestParam String dateOfBirth)
+	public String addCustomer(@RequestParam String name, @RequestParam String email, @RequestParam String dateOfBirth)
 	{
 		Date d = Date.valueOf(dateOfBirth);
-		Customer c=new Customer(id, name, email, d);
+		Customer c=new Customer();
+		c.setName(name);
+		c.setEmail(email);
+		c.setDateOfBirth(d);
 		service.addCustomer(c);
 		return "index";
 	}
