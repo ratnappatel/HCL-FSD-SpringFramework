@@ -7,11 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Welcome to My CustomerManagement Portal</h1>
-<form method=get action="find">
-	Enter Customer ID<input type=text name="id"><br>
-	<input type=submit value="Find Customer">
-</form>
-
+Update/Delete operation was successful
+<a href="/list">Go Back To List Page</a>
 </body>
 </html>

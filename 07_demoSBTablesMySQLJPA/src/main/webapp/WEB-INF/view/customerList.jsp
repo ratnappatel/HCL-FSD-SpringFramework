@@ -22,7 +22,7 @@
            <td>${c.loan.title}</td>
            <td>${c.loan.amount} </td>
            <td>
-           	<a href="/update?id=${c.id}">Edit</a>
+           	<a href="/find?id=${c.id}">Edit</a>
            	<a href="/delete?id=${c.id}">Delete</a>
            </td>        
         </tr>

@@ -42,13 +42,26 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public Customer updateCustomer(int id, Customer customer) {
-		
-		return null;
+		Optional<Customer> op=repo.findById(id);
+		Customer c=null;
+		if(op.isPresent())
+		{
+			c=op.get();
+			c.setName(customer.getName());
+			c.setEmail(customer.getEmail());
+			c.setDateOfBirth(customer.getDateOfBirth());
+			
+			c.setLoan(customer.getLoan());
+			c=repo.save(c);
+		}
+		return c;
 	}
 
 	@Override
 	public void deleteCustomer(int id) {
-		// TODO Auto-generated method stub
+		Optional<Customer> op=repo.findById(id);
+		if(op.isPresent())
+			repo.delete(op.get());
 		
 	}
 

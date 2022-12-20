@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page errorPage="error.jsp" language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -8,14 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-Customer ID :<b>${cust.id }</b><br>
-Customer Name :<b>${cust.name }</b><br>
-Customer Email :<b>${cust.email }</b><br>
-Customer DateOfBirth :<b>${cust.dateOfBirth }</b><br>
-<h3>Loan Details</h3>
+	<form method=post action="update">
+	
+		Customer ID :<input type=text name="cid" value=${cust.id } readonly><br>
+		Customer Name :<input type=text name="name" value=${cust.name }><br>
+		Customer Email :<input type=text name="email" value=${cust.email }><br>
+		Customer DateOfBirth :<input type=date name="dateOfBirth" value=${cust.dateOfBirth }><br>
+		<h3>Loan Details</h3>
+		
+		Loan ID : <input type=text name="lid" value=${cust.loan.id } readonly><br>
+		Loan Type: <input type=text name="title" value=${cust.loan.title }><br>
+		Loan Amount: <input type=text name="amount" value=${cust.loan.amount }><br>
+		<input type=submit value="Update">
+	</form>
 
-Loan ID : <b>${cust.loan.id}</b> <br>
-Loan Type: <b>${cust.loan.title }</b><br>
-Loan Amount: <b>${cust.loan.amount }</b>
 </body>
 </html>
