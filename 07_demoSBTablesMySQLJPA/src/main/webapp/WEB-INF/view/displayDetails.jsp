@@ -13,7 +13,7 @@
 		Customer ID :<input type=text name="cid" value=${cust.id } readonly><br>
 		Customer Name :<input type=text name="name" value=${cust.name }><br>
 		Customer Email :<input type=text name="email" value=${cust.email }><br>
-		Customer DateOfBirth :<input type=date name="dateOfBirth" value=${cust.dateOfBirth }><br>
+		Customer DateOfBirth :<input type=date name="dateOfBirth" value=${cust.dateOfBirth}><br>
 		<h3>Loan Details</h3>
 		
 		Loan ID : <input type=text name="lid" value=${cust.loan.id } readonly><br>

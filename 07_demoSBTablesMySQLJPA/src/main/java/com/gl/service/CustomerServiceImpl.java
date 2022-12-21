@@ -41,20 +41,20 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public Customer updateCustomer(int id, Customer customer) {
+	public Customer updateCustomer(int id, Customer updatedCustomer) {
 		Optional<Customer> op=repo.findById(id);
-		Customer c=null;
+		Customer oldCustomer=null;
 		if(op.isPresent())
 		{
-			c=op.get();
-			c.setName(customer.getName());
-			c.setEmail(customer.getEmail());
-			c.setDateOfBirth(customer.getDateOfBirth());
+			oldCustomer=op.get();
+			oldCustomer.setName(updatedCustomer.getName());
+			oldCustomer.setEmail(updatedCustomer.getEmail());
+			oldCustomer.setDateOfBirth(updatedCustomer.getDateOfBirth());
 			
-			c.setLoan(customer.getLoan());
-			c=repo.save(c);
+			oldCustomer.setLoan(updatedCustomer.getLoan());
+			oldCustomer=repo.save(oldCustomer);
 		}
-		return c;
+		return oldCustomer;
 	}
 
 	@Override
