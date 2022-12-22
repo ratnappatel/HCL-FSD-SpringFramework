@@ -27,9 +27,7 @@ public class Customer {
 	private String email;
 	private Date dateOfBirth;
 	
-	//Trying to implement One-To-One relation
 	@OneToOne(cascade=CascadeType.ALL)
-	// Joing column annotation instructs spring boot to create foreign key column with name
 	@JoinColumn(name="loan_id" ,unique=true)
 	private Loan loan;
 

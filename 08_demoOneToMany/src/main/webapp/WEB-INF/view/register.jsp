@@ -10,6 +10,9 @@
 	<form action="/register" method=post style="border: 2px solid green">
 		Enter User Name<input type=text name="name"><br>
 		Enter Password<input type=password name="password"><br>
+		Enter Email <input type=email name="email"><br>
+		Enter Mobile<input type=text name="mobile"><br>
+		Enter DateOfBirth<input type=date name="dateOfBirth"><br>
 		<input type=submit value="Register As User"><input type=reset value="Reset"><br>
 	</form>
 </body>

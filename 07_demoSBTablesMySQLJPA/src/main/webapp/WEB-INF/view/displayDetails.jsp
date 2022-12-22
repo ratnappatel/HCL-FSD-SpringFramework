@@ -8,8 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method=post action="update">
-	
+	<form method=post action="update">	
 		Customer ID :<input type=text name="cid" value=${cust.id } readonly><br>
 		Customer Name :<input type=text name="name" value=${cust.name }><br>
 		Customer Email :<input type=text name="email" value=${cust.email }><br>
