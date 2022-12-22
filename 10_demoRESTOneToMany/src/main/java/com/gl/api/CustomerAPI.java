@@ -25,7 +25,7 @@ public class CustomerAPI {
 
 	@Autowired
 	CardCustomerService cardCustomerService;
-	@PostMapping("/add")
+	@PostMapping("/")
 	public ResponseEntity<Integer> addCustomer(@RequestBody CustomerDTO customer) throws GLBankException
 	{
 		int id=cardCustomerService.addCustomer(customer);
