@@ -55,7 +55,7 @@
 		    <version>4.12</version>
 		    <scope>compile</scope>
 		</dependency>
-			<!--
+			
 	<dependency>
 	    <groupId>org.assertj</groupId>
 	    <artifactId>assertj-core</artifactId>
@@ -80,11 +80,7 @@
 	    <version>1.5.0</version>
 	    <scope>compile</scope>
 	</dependency>
- -->
-
-
-
-	</dependencies>
+ 	</dependencies>
 
 	<build>
 		<plugins>
